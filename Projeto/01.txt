@@ -1,0 +1,89 @@
+For more info see: https://angular.io/guide/build#configuring-commonjs-dependencies
+./src/app/pages/beneficiary/beneficiary.component.ts:7:0-79 - Error: Module not found: Error: Can't resolve '../../core/services/giftcardData.service' in '/__w/pf-td-tesouro-direto-app-gift-hotsite/pf-td-tesouro-direto-app-gift-hotsite/src/app/pages/beneficiary'
+./src/app/pages/giftcard-list/giftcard-list.component.ts:4:0-76 - Error: Module not found: Error: Can't resolve '@//core/services/giftcardData.service' in '/__w/pf-td-tesouro-direto-app-gift-hotsite/pf-td-tesouro-direto-app-gift-hotsite/src/app/pages/giftcard-list'
+./src/app/pages/giftcard/giftcard.component.ts:3:0-76 - Error: Module not found: Error: Can't resolve '@//core/services/giftcardData.service' in '/__w/pf-td-tesouro-direto-app-gift-hotsite/pf-td-tesouro-direto-app-gift-hotsite/src/app/pages/giftcard'
+./src/app/shared/components/giftcard-list-miniature/giftcard-list-miniature.component.ts:3:0-76 - Error: Module not found: Error: Can't resolve '@//core/services/giftcardData.service' in '/__w/pf-td-tesouro-direto-app-gift-hotsite/pf-td-tesouro-direto-app-gift-hotsite/src/app/shared/components/giftcard-list-miniature'
+Error: src/app/app.module.ts:46:9 - error NG6001: The class 'GiftcardListComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+46         GiftcardListComponent,
+           ~~~~~~~~~~~~~~~~~~~~~
+  src/app/pages/giftcard-list/giftcard-list.component.ts:11:14
+    11 export class GiftcardListComponent implements OnInit {
+                    ~~~~~~~~~~~~~~~~~~~~~
+    'GiftcardListComponent' is declared here.
+Error: src/app/app.module.ts:48:9 - error NG6001: The class 'GiftcardListMiniatureComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+48         GiftcardListMiniatureComponent,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  src/app/shared/components/giftcard-list-miniature/giftcard-list-miniature.component.ts:11:14
+    11 export class GiftcardListMiniatureComponent implements OnInit, OnChanges {
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    'GiftcardListMiniatureComponent' is declared here.
+Error: src/app/app.module.ts:53:9 - error NG6001: The class 'GiftcardComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+53         GiftcardComponent,
+           ~~~~~~~~~~~~~~~~~
+  src/app/pages/giftcard/giftcard.component.ts:13:14
+    13 export class GiftcardComponent implements OnInit {
+                    ~~~~~~~~~~~~~~~~~
+    'GiftcardComponent' is declared here.
+Error: src/app/app.module.ts:58:9 - error NG6001: The class 'BeneficiaryComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+58         BeneficiaryComponent,
+           ~~~~~~~~~~~~~~~~~~~~
+  src/app/pages/beneficiary/beneficiary.component.ts:22:14
+    22 export class BeneficiaryComponent implements OnInit {
+                    ~~~~~~~~~~~~~~~~~~~~
+    'BeneficiaryComponent' is declared here.
+Error: src/app/pages/beneficiary/beneficiary.component.ts:5:37 - error TS2307: Cannot find module '../../core/services/giftcardData.service' or its corresponding type declarations.
+5 import { GiftCardDataService } from '../../core/services/giftcardData.service';
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Error: src/app/pages/beneficiary/beneficiary.component.ts:43:17 - error NG2003: No suitable injection token for parameter 'giftcardService' of class 'BeneficiaryComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+43         private giftcardService: GiftCardDataService,
+                   ~~~~~~~~~~~~~~~
+  src/app/pages/beneficiary/beneficiary.component.ts:43:34
+    43         private giftcardService: GiftCardDataService,
+                                        ~~~~~~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+Error: src/app/pages/beneficiary/beneficiary.component.ts:57:24 - error TS7006: Parameter 'data' implicitly has an 'any' type.
+57             .subscribe(data => {
+                          ~~~~
+Error: src/app/pages/giftcard-list/giftcard-list.component.ts:4:37 - error TS2307: Cannot find module '@//core/services/giftcardData.service' or its corresponding type declarations.
+4 import { GiftCardDataService } from '@//core/services/giftcardData.service';
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Error: src/app/pages/giftcard-list/giftcard-list.component.ts:14:25 - error NG2003: No suitable injection token for parameter 'giftcardService' of class 'GiftcardListComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+14     constructor(private giftcardService: GiftCardDataService) {
+                           ~~~~~~~~~~~~~~~
+  src/app/pages/giftcard-list/giftcard-list.component.ts:14:42
+    14     constructor(private giftcardService: GiftCardDataService) {
+                                                ~~~~~~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+Error: src/app/pages/giftcard-list/giftcard-list.component.ts:19:24 - error TS7006: Parameter 'data' implicitly has an 'any' type.
+19             .subscribe(data =>
+                          ~~~~
+Error: src/app/pages/giftcard-list/giftcard-list.component.ts:20:44 - error TS7006: Parameter 'gift' implicitly has an 'any' type.
+20                 this.categories = data.map(gift => gift.category)
+                                              ~~~~
+Error: src/app/pages/giftcard/giftcard.component.ts:1:37 - error TS2307: Cannot find module '@//core/services/giftcardData.service' or its corresponding type declarations.
+1 import { GiftCardDataService } from '@//core/services/giftcardData.service';
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Error: src/app/pages/giftcard/giftcard.component.ts:24:25 - error NG2003: No suitable injection token for parameter 'giftcardService' of class 'GiftcardComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+24     constructor(private giftcardService: GiftCardDataService, private activatedRoute: ActivatedRoute, private router: Router, private gaService: GoogleAnalitycsService) { }
+                           ~~~~~~~~~~~~~~~
+  src/app/pages/giftcard/giftcard.component.ts:24:42
+    24     constructor(private giftcardService: GiftCardDataService, private activatedRoute: ActivatedRoute, private router: Router, private gaService: GoogleAnalitycsService) { }
+                                                ~~~~~~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+Error: src/app/pages/giftcard/giftcard.component.ts:42:24 - error TS7006: Parameter 'x' implicitly has an 'any' type.
+42             .subscribe(x => {
+                          ~
+Error: src/app/shared/components/giftcard-list-miniature/giftcard-list-miniature.component.ts:1:37 - error TS2307: Cannot find module '@//core/services/giftcardData.service' or its corresponding type declarations.
+1 import { GiftCardDataService } from '@//core/services/giftcardData.service';
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Error: src/app/shared/components/giftcard-list-miniature/giftcard-list-miniature.component.ts:16:25 - error NG2003: No suitable injection token for parameter 'giftcardService' of class 'GiftcardListMiniatureComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+16     constructor(private giftcardService: GiftCardDataService, private gaService: GoogleAnalitycsService) {
+                           ~~~~~~~~~~~~~~~
+  src/app/shared/components/giftcard-list-miniature/giftcard-list-miniature.component.ts:16:42
+    16     constructor(private giftcardService: GiftCardDataService, private gaService: GoogleAnalitycsService) {
+                                                ~~~~~~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
